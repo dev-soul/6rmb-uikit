@@ -29,21 +29,27 @@ const ConnectModal: React.FC<Props> = ({ login, onDismiss = () => null }) => {
     if (window.screen.availWidth <= mobileScreenSize) {
       setIsMobileDevice(true);
     }
-  }, [])
+  }, []);
 
   return (
     <Modal title="Connect to a wallet" onDismiss={onDismiss}>
-      {isMobileDevice &&
-        <div style={{ marginBottom: '20px' }}>
+      {isMobileDevice && (
+        <div style={{ marginBottom: "20px" }}>
           <Alert title="" variant="warning">
             <Text as="p">
-              It looks like you are on a mobile device, 
-              click <Link style={{display: 'inline-block'}} href="https://docs.pancakeswap.finance/guides/faq#how-do-i-set-up-my-wallet-on-binance-smart-chain" external>here</Link>&nbsp;
-              If you are not on a mobile device, use the buttons below to connect your wallet.
+              It looks like you are on a mobile device, click{" "}
+              <Link
+                style={{ display: "inline-block" }}
+                href="https://docs.pancakeswap.finance/guides/faq#how-do-i-set-up-my-wallet-on-binance-smart-chain"
+                external
+              >
+                here
+              </Link>
+              &nbsp; If you are not on a mobile device, use the buttons below to connect your wallet.
             </Text>
           </Alert>
         </div>
-      }
+      )}
 
       {config.map((entry, index) => (
         <WalletCard

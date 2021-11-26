@@ -17,7 +17,7 @@ export const brandColors = {
 export const lightColors: Colors = {
   ...baseColors,
   ...brandColors,
-  background: "#323232", //Background, the main block in the centre 
+  background: "#323232", //Background, the main block in the centre
   backgroundDisabled: "#E9EAEB", //Harvest button when nothing to harvest
   contrast: "#191326", //might be the stake only slider when active? But in dark mode its called invertedContrast
   invertedContrast: "#FFFFFF",
