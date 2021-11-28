@@ -2547,14 +2547,12 @@ var connectors = [
     {
         title: "WalletConnect",
         icon: Icon$2,
-
         connectorId: exports.ConnectorNames.WalletConnect,
     },
     {
         title: "Binance Chain Wallet",
         icon: Icon$1,
         connectorId: exports.ConnectorNames.BSC,
-
     },
     // {
     //   title: "SafePal Wallet",
