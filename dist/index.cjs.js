@@ -2516,46 +2516,60 @@ var Icon$1 = function (props) {
         React__default["default"].createElement("path", { d: "M6 14.6302L8.32183 15.9883V20.6244L12.3154 22.9424V25.6585L6 21.9824V14.6302Z", fill: "#F0B90B" })));
 };
 
+exports.ConnectorNames = void 0;
+(function (ConnectorNames) {
+    ConnectorNames["Injected"] = "injected";
+    ConnectorNames["WalletConnect"] = "walletconnect";
+    ConnectorNames["BSC"] = "bsc";
+})(exports.ConnectorNames || (exports.ConnectorNames = {}));
+
 var connectors = [
     {
         title: "Metamask",
         icon: Icon$6,
-        connectorId: "injected",
+        connectorId: exports.ConnectorNames.Injected,
     },
     {
         title: "TrustWallet",
         icon: Icon$3,
-        connectorId: "injected",
+        connectorId: exports.ConnectorNames.Injected,
     },
     {
         title: "MathWallet",
         icon: Icon$5,
-        connectorId: "injected",
+        connectorId: exports.ConnectorNames.Injected,
     },
     {
         title: "TokenPocket",
         icon: Icon$4,
-        connectorId: "injected",
+        connectorId: exports.ConnectorNames.Injected,
     },
     {
         title: "WalletConnect",
         icon: Icon$2,
-        connectorId: "walletconnect",
+
+        connectorId: exports.ConnectorNames.WalletConnect,
     },
     {
         title: "Binance Chain Wallet",
         icon: Icon$1,
-        connectorId: "bsc",
+        connectorId: exports.ConnectorNames.BSC,
+
     },
+    // {
+    //   title: "SafePal Wallet",
+    //   icon: SafePalWallet,
+    //   connectorId: ConnectorNames.Injected,
+    // },
 ];
-var localStorageKey = "accountStatus";
+var connectorLocalStorageKey = "connectorId";
 
 var WalletCard = function (_a) {
     var login = _a.login, walletConfig = _a.walletConfig, onDismiss = _a.onDismiss, mb = _a.mb;
     var title = walletConfig.title, Icon = walletConfig.icon;
     return (React__default["default"].createElement(Button, { fullWidth: true, variant: "tertiary", onClick: function () {
             login(walletConfig.connectorId);
-            window.localStorage.setItem(localStorageKey, "1");
+            window.localStorage.setItem(connectorLocalStorageKey, walletConfig.connectorId);
             onDismiss();
         }, style: { justifyContent: "space-between" }, mb: mb, id: "wallet-connect-".concat(title.toLocaleLowerCase()) },
         React__default["default"].createElement(Text, { bold: true, color: "primary", mr: "16px" }, title),
@@ -2629,7 +2643,7 @@ var AccountModal = function (_a) {
         React__default["default"].createElement(Flex, { justifyContent: "center" },
             React__default["default"].createElement(Button, { size: "sm", variant: "secondary", onClick: function () {
                     logout();
-                    window.localStorage.removeItem(localStorageKey);
+                    window.localStorage.removeItem(connectorLocalStorageKey);
                     onDismiss();
                     window.location.reload();
                 } }, "Logout"))));
@@ -3098,6 +3112,7 @@ exports.Won = Icon$I;
 exports.alertVariants = variants;
 exports.byTextAscending = byTextAscending;
 exports.byTextDescending = byTextDescending;
+exports.connectorLocalStorageKey = connectorLocalStorageKey;
 exports.dark = darkTheme;
 exports.darkColors = darkColors;
 exports.light = lightTheme;

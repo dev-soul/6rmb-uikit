@@ -2503,46 +2503,61 @@ var Icon$1 = function (props) {
         React.createElement("path", { d: "M6 14.6302L8.32183 15.9883V20.6244L12.3154 22.9424V25.6585L6 21.9824V14.6302Z", fill: "#F0B90B" })));
 };
 
+var ConnectorNames;
+(function (ConnectorNames) {
+    ConnectorNames["Injected"] = "injected";
+    ConnectorNames["WalletConnect"] = "walletconnect";
+    ConnectorNames["BSC"] = "bsc";
+})(ConnectorNames || (ConnectorNames = {}));
+
 var connectors = [
     {
         title: "Metamask",
         icon: Icon$6,
-        connectorId: "injected",
+        connectorId: ConnectorNames.Injected,
     },
     {
         title: "TrustWallet",
         icon: Icon$3,
-        connectorId: "injected",
+        connectorId: ConnectorNames.Injected,
     },
     {
         title: "MathWallet",
         icon: Icon$5,
-        connectorId: "injected",
+        connectorId: ConnectorNames.Injected,
     },
     {
         title: "TokenPocket",
         icon: Icon$4,
+
+        connectorId: ConnectorNames.Injected,
+
         connectorId: "injected",
     },
     {
         title: "WalletConnect",
         icon: Icon$2,
-        connectorId: "walletconnect",
+        connectorId: ConnectorNames.WalletConnect,
     },
     {
         title: "Binance Chain Wallet",
         icon: Icon$1,
-        connectorId: "bsc",
+        connectorId: ConnectorNames.BSC,
     },
+    // {
+    //   title: "SafePal Wallet",
+    //   icon: SafePalWallet,
+    //   connectorId: ConnectorNames.Injected,
+    // },
 ];
-var localStorageKey = "accountStatus";
+var connectorLocalStorageKey = "connectorId";
 
 var WalletCard = function (_a) {
     var login = _a.login, walletConfig = _a.walletConfig, onDismiss = _a.onDismiss, mb = _a.mb;
     var title = walletConfig.title, Icon = walletConfig.icon;
     return (React.createElement(Button, { fullWidth: true, variant: "tertiary", onClick: function () {
             login(walletConfig.connectorId);
-            window.localStorage.setItem(localStorageKey, "1");
+            window.localStorage.setItem(connectorLocalStorageKey, walletConfig.connectorId);
             onDismiss();
         }, style: { justifyContent: "space-between" }, mb: mb, id: "wallet-connect-".concat(title.toLocaleLowerCase()) },
         React.createElement(Text, { bold: true, color: "primary", mr: "16px" }, title),
@@ -2616,7 +2631,7 @@ var AccountModal = function (_a) {
         React.createElement(Flex, { justifyContent: "center" },
             React.createElement(Button, { size: "sm", variant: "secondary", onClick: function () {
                     logout();
-                    window.localStorage.removeItem(localStorageKey);
+                    window.localStorage.removeItem(connectorLocalStorageKey);
                     onDismiss();
                     window.location.reload();
                 } }, "Logout"))));
@@ -2998,4 +3013,5 @@ var darkTheme = __assign(__assign({}, base), { isDark: true, alert: dark$6, butt
 
 var lightTheme = __assign(__assign({}, base), { isDark: false, alert: light$6, button: light$5, colors: lightColors, card: light$4, toggle: light$2, nav: light$1, modal: light, radio: light$3 });
 
-export { Icon$1c as AddIcon, Alert, Icon$1b as ArrowBackIcon, Icon$1a as ArrowDownIcon, Icon$19 as ArrowDropDownIcon, Icon$18 as ArrowDropUpIcon, Icon$17 as ArrowForwardIcon, Icon$y as AuditsIcon, Icon$16 as AutoRenewIcon, BackgroundImage, GridLayout$1 as BaseLayout, Icon$15 as BinanceIcon, Icon$1e as BlockIcon, Breadcrumbs, Icon$14 as BunnyPlaceholderIcon, Button, ButtonMenu, ButtonMenuItem, Icon$12 as CalculateIcon, Card, CardBody, CardFooter, CardHeader, CardRibbon, Icon$13 as CardViewIcon, GridLayout as CardsLayout, Checkbox, Icon$1g as CheckmarkCircleIcon, Icon$11 as CheckmarkIcon, Icon$10 as ChevronDownIcon, Icon$$ as ChevronLeftIcon, Icon$_ as ChevronRightIcon, Icon$Z as ChevronUpIcon, Icon$Y as CloseIcon, Icon$X as CogIcon, Icon$W as CommunityIcon, Icon$V as CopyIcon, Dropdown, Icon$1f as ErrorIcon, Icon$x as FeaturesIcon, Flex, Heading, Icon$U as HelpIcon, IconButton, Image, Icon$1d as InfoIcon, Input$1 as Input, Link, LinkExternal, Icon$T as ListViewIcon, Icon$S as LogoIcon, Icon$R as LogoRoundIcon, Menu, Icon$Q as MinusIcon, Modal, ModalProvider, Icon$P as OpenNewIcon, Icon$N as PancakeRoundIcon, Icon$O as PancakesIcon, Icon$A as PoolsIcon, Icon$M as PrizeIcon, Progress, Icon$J as ProgressBunny, Radio, Icon$z as ReferralsIcon, Icon$L as RemoveIcon, ResetCSS, Icon$F as SearchIcon, Skeleton, Spinner, Svg, Icon$E as SwapVertIcon, Icon$D as SyncAltIcon, Tag, Text, Icon$H as Ticket, Icon$G as TicketRound, Icon$B as TimerIcon, ToastContainer, Toggle, UserBlock, Icon$K as VerifiedIcon, Icon$C as WarningIcon, Icon$I as Won, variants as alertVariants, byTextAscending, byTextDescending, darkTheme as dark, darkColors, lightTheme as light, lightColors, makeRender, links as menuConfig, types as toastTypes, useMatchBreakpoints, useModal, useParticleBurst, useTable, useWalletModal };
+export { Icon$1c as AddIcon, Alert, Icon$1b as ArrowBackIcon, Icon$1a as ArrowDownIcon, Icon$19 as ArrowDropDownIcon, Icon$18 as ArrowDropUpIcon, Icon$17 as ArrowForwardIcon, Icon$y as AuditsIcon, Icon$16 as AutoRenewIcon, BackgroundImage, GridLayout$1 as BaseLayout, Icon$15 as BinanceIcon, Icon$1e as BlockIcon, Breadcrumbs, Icon$14 as BunnyPlaceholderIcon, Button, ButtonMenu, ButtonMenuItem, Icon$12 as CalculateIcon, Card, CardBody, CardFooter, CardHeader, CardRibbon, Icon$13 as CardViewIcon, GridLayout as CardsLayout, Checkbox, Icon$1g as CheckmarkCircleIcon, Icon$11 as CheckmarkIcon, Icon$10 as ChevronDownIcon, Icon$$ as ChevronLeftIcon, Icon$_ as ChevronRightIcon, Icon$Z as ChevronUpIcon, Icon$Y as CloseIcon, Icon$X as CogIcon, Icon$W as CommunityIcon, ConnectorNames, Icon$V as CopyIcon, Dropdown, Icon$1f as ErrorIcon, Icon$x as FeaturesIcon, Flex, Heading, Icon$U as HelpIcon, IconButton, Image, Icon$1d as InfoIcon, Input$1 as Input, Link, LinkExternal, Icon$T as ListViewIcon, Icon$S as LogoIcon, Icon$R as LogoRoundIcon, Menu, Icon$Q as MinusIcon, Modal, ModalProvider, Icon$P as OpenNewIcon, Icon$N as PancakeRoundIcon, Icon$O as PancakesIcon, Icon$A as PoolsIcon, Icon$M as PrizeIcon, Progress, Icon$J as ProgressBunny, Radio, Icon$z as ReferralsIcon, Icon$L as RemoveIcon, ResetCSS, Icon$F as SearchIcon, Skeleton, Spinner, Svg, Icon$E as SwapVertIcon, Icon$D as SyncAltIcon, Tag, Text, Icon$H as Ticket, Icon$G as TicketRound, Icon$B as TimerIcon, ToastContainer, Toggle, Icon$K as VerifiedIcon, Icon$C as WarningIcon, Icon$I as Won, variants as alertVariants, byTextAscending, byTextDescending, connectorLocalStorageKey, darkTheme as dark, darkColors, lightTheme as light, lightColors, makeRender, links as menuConfig, types as toastTypes, useMatchBreakpoints, useModal, useParticleBurst, useTable, useWalletModal };
+
