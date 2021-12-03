@@ -2528,6 +2528,11 @@ var connectors = [
         connectorId: ConnectorNames.Injected,
     },
     {
+        title: "Coin98",
+        icon: Icon$1,
+        connectorId: ConnectorNames.Coin98,
+    },
+    {
         title: "MathWallet",
         icon: Icon$6,
         connectorId: ConnectorNames.Injected,
@@ -2548,15 +2553,10 @@ var connectors = [
         connectorId: ConnectorNames.BSC,
     },
     {
-        title: "Coin98",
-        icon: Icon$1,
-        connectorId: ConnectorNames.Coin98,
+        title: "SafePal Wallet",
+        icon: Icon$7,
+        connectorId: ConnectorNames.Injected,
     },
-    // {
-    //   title: "SafePal Wallet",
-    //   icon: SafePalWallet,
-    //   connectorId: ConnectorNames.Injected,
-    // },
 ];
 var connectorLocalStorageKey = "connectorId";
 

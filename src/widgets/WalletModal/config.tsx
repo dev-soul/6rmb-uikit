@@ -19,6 +19,11 @@ const connectors: Config[] = [
     connectorId: ConnectorNames.Injected,
   },
   {
+    title: "Coin98",
+    icon: Coin98,
+    connectorId: ConnectorNames.Coin98,
+  },
+  {
     title: "MathWallet",
     icon: MathWallet,
     connectorId: ConnectorNames.Injected,
@@ -39,15 +44,10 @@ const connectors: Config[] = [
     connectorId: ConnectorNames.BSC,
   },
   {
-    title: "Coin98",
-    icon: Coin98,
-    connectorId: ConnectorNames.Coin98,
+    title: "SafePal Wallet",
+    icon: Metamask,
+    connectorId: ConnectorNames.Injected,
   },
-  // {
-  //   title: "SafePal Wallet",
-  //   icon: SafePalWallet,
-  //   connectorId: ConnectorNames.Injected,
-  // },
 ];
 
 export default connectors;
