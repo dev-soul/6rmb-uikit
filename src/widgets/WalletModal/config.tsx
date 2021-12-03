@@ -4,7 +4,7 @@ import TokenPocket from "./icons/TokenPocket";
 import TrustWallet from "./icons/TrustWallet";
 import WalletConnect from "./icons/WalletConnect";
 import BinanceChain from "./icons/BinanceChain";
-// import SafePalWallet from "./icons/SafePalWallet";
+import Coin98 from "./icons/Coin98";
 import { Config, ConnectorNames } from "./types";
 
 const connectors: Config[] = [
@@ -37,6 +37,11 @@ const connectors: Config[] = [
     title: "Binance Chain Wallet",
     icon: BinanceChain,
     connectorId: ConnectorNames.BSC,
+  },
+  {
+    title: "Coin98",
+    icon: Coin98,
+    connectorId: ConnectorNames.Coin98,
   },
   // {
   //   title: "SafePal Wallet",
