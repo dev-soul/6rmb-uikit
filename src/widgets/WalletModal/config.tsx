@@ -4,7 +4,7 @@ import TokenPocket from "./icons/TokenPocket";
 import TrustWallet from "./icons/TrustWallet";
 import WalletConnect from "./icons/WalletConnect";
 import BinanceChain from "./icons/BinanceChain";
-import Coin98 from "./icons/Coin98";
+// import SafePalWallet from "./icons/SafePalWallet";
 import { Config, ConnectorNames } from "./types";
 
 const connectors: Config[] = [
@@ -17,11 +17,6 @@ const connectors: Config[] = [
     title: "TrustWallet",
     icon: TrustWallet,
     connectorId: ConnectorNames.Injected,
-  },
-  {
-    title: "Coin98",
-    icon: Coin98,
-    connectorId: ConnectorNames.Coin98,
   },
   {
     title: "MathWallet",
@@ -43,12 +38,8 @@ const connectors: Config[] = [
     icon: BinanceChain,
     connectorId: ConnectorNames.BSC,
   },
-  {
-    title: "SafePal Wallet",
-    icon: Metamask,
-    connectorId: ConnectorNames.Injected,
-  },
-];
+
+]
 
 export default connectors;
 export const connectorLocalStorageKey = "connectorId";
