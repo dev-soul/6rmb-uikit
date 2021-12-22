@@ -39,7 +39,7 @@ const connectors: Config[] = [
     connectorId: ConnectorNames.BSC,
   },
 
-]
+];
 
 export default connectors;
 export const connectorLocalStorageKey = "connectorId";
