@@ -733,10 +733,7 @@ CardHeader.defaultProps = {
 };
 var templateObject_1$z;
 
-var CardFooter = styled.div(templateObject_1$y || (templateObject_1$y = __makeTemplateObject(["\n  border-top: 1px solid ", ";\n  ", "\n"], ["\n  border-top: 1px solid ", ";\n  ", "\n"])), function (_a) {
-    var theme = _a.theme;
-    return theme.colors.borderColor;
-}, space);
+var CardFooter = styled.div(templateObject_1$y || (templateObject_1$y = __makeTemplateObject(["\n\n  ", "\n"], ["\n\n  ", "\n"])), space);
 CardFooter.defaultProps = {
     p: "24px",
 };
