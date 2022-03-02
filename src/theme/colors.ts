@@ -24,7 +24,7 @@ export const lightColors: Colors = {
   input: "#eeeaf4", //'stake only' slider
   inputBorder: "#cccccc",
   tertiary: "#EFF4F5", //color of highlighted box on navbar
-  text: "#FFFFFF", //color of words on home menu cards eg farms & staking
+  text: "#4A5A72", //color of words on home menu cards eg farms & staking
   textDisabled: "#BDC2C4", //color of boxes non highlighted on menu, might actually be the unhighlighted harvest word
   textSubtle: "#FFFFFF", //color of text on menu dropdown items
   borderColor: "#E9EAEB", //The small line on the left side, not important
@@ -46,7 +46,7 @@ export const darkColors: Colors = {
   inputBorder: "#cccccc",
   primaryDark: "#599e17",
   tertiary: "#2d2f37", //color of highlighted box on menu
-  text: "#FFFFFF", //color of words on home menu cards eg farms & staking
+  text: "#4A5A72", //color of words on home menu cards eg farms & staking
   textDisabled: "#666171", //color of boxes non highlighted on menu
   textSubtle: "#FFFFFF", //color of text on menu dropdown items
   borderColor: "#524B63", //The small line on the left side, not important
