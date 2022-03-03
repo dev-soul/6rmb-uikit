@@ -1,6 +1,7 @@
 import { Colors } from "./types";
 
 export const baseColors = {
+
   failure: "#F72B50",
   primary: "#FB075F", // color of the icons on navbar, scrollbar on right side, fill color of harvest and approve contracts
   primaryBright: "#599e17",
@@ -8,10 +9,10 @@ export const baseColors = {
   secondary: "#EAEDF8",
   success: "#68CF29",
   warning: "#FFAB2D",
-};
+}
 
 export const brandColors = {
-  binance: "#F0B90B",
+   binance: "#F0B90B",
 };
 
 export const lightColors: Colors = {
