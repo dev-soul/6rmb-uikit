@@ -38,7 +38,6 @@ const connectors: Config[] = [
     icon: BinanceChain,
     connectorId: ConnectorNames.BSC,
   },
-
 ];
 
 export default connectors;

@@ -2843,20 +2843,20 @@ var templateObject_1;
 
 var baseColors = {
     failure: "#F72B50",
-    primary: "#bf3745",
+    primary: "#FB075F",
     primaryBright: "#599e17",
     primaryDark: "#599e17",
-    secondary: "#7645D9",
+    secondary: "#EAEDF8",
     success: "#68CF29",
     warning: "#FFAB2D",
 };
 var brandColors = {
     binance: "#F0B90B",
 };
-var lightColors = __assign(__assign(__assign({}, baseColors), brandColors), { background: "#323232", backgroundDisabled: "#E9EAEB", contrast: "#191326", invertedContrast: "#FFFFFF", input: "#eeeaf4", inputBorder: "#cccccc", tertiary: "#EFF4F5", text: "#FFFFFF", textDisabled: "#BDC2C4", textSubtle: "#FFFFFF", borderColor: "#E9EAEB", card: "#191919", gradients: {
+var lightColors = __assign(__assign(__assign({}, baseColors), brandColors), { background: "#323232", backgroundDisabled: "#E9EAEB", contrast: "#191326", invertedContrast: "#4A5A72", input: "#eeeaf4", inputBorder: "#cccccc", tertiary: "#EFF4F5", text: "#4A5A72", textDisabled: "#BDC2C4", textSubtle: "#4A5A72", borderColor: "#E9EAEB", card: "#191919", gradients: {
         bubblegum: "linear-gradient(139.73deg, #E6FDFF 0%, #F3EFFF 100%)",
     } });
-var darkColors = __assign(__assign(__assign({}, baseColors), brandColors), { secondary: "#e9f1fd", background: "#323232", backgroundDisabled: "#3c3742", contrast: "#FFFFFF", invertedContrast: "#0a0e17", input: "#483f3b", inputBorder: "#cccccc", primaryDark: "#599e17", tertiary: "#2d2f37", text: "#FFFFFF", textDisabled: "#666171", textSubtle: "#FFFFFF", borderColor: "#524B63", card: "#191919", gradients: {
+var darkColors = __assign(__assign(__assign({}, baseColors), brandColors), { secondary: "#e9f1fd", background: "#323232", backgroundDisabled: "#3c3742", contrast: "#4A5A72", invertedContrast: "#0a0e17", input: "#483f3b", inputBorder: "#cccccc", primaryDark: "#599e17", tertiary: "#2d2f37", text: "#4A5A72", textDisabled: "#666171", textSubtle: "#4A5A72", borderColor: "#524B63", card: "#191919", gradients: {
         bubblegum: "linear-gradient(139.73deg, #1f606f 0%, #164865 100%)",
     } });
 
